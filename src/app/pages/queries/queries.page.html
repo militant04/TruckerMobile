@@ -1,0 +1,60 @@
+<ion-header no-border class="ion-no-border" style="background-color: orange; color:white;">
+  <ion-toolbar  [color]="dynamicColor">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Queries and Suggestions</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="orange" style="background-color: orange">
+  <div style="background-color: orange; color: #ffffff">
+    <div class="row" style="background-color: #538cd5; margin: 20px; border-top-left-radius: 50px;" padding>
+
+
+
+      <ion-label><span style="font-weight: bolder">Hello!</span> <br> If you have any queries , compliments or suggestions. Please feel free to let us know and we will respond ASAP</ion-label>
+
+
+    </div>
+    <ion-list style="background-color: rgba(0,10,62,0.52); margin: 20px; border-radius: 6px;" padding>
+
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">What is your Name?</label>
+        <input type="text" class="form-control" id="exampleI45nputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+        <!--  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Please Enter your Email</label>
+        <input type="email" class="form-control" id="exasmpleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small style="color:#ffffff" id="emdailsHelp" class="form-text text-muted">We'll never share your email with anyone else. We use this email to contact you</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Please Enter Cellphone</label>
+        <input type="email" class="form-control" id="exasmpleInputEmaxil1" aria-describedby="emailHelp" placeholder="Enter Cellphone">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">How can we be of assistance</label>
+        <textarea type="email" size="8" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter query or suggestion"></textarea>
+        <!--    <small id="emailHedlp" class="form-text text-muted">We'll never share your address with anyone else.</small>-->
+      </div>
+      <div >
+        <ion-button  color="secondary" expand="full"> Submit</ion-button>
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </ion-list>
+
+
+
+  </div>
+</ion-content>

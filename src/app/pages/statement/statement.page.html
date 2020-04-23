@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Statement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-group row">
+    <label>From</label>
+    <input  class="form-control col-sm-6" placeholder="From" [(ngModel)]="datefrom" type="date"/>
+  </div>
+  <div class="form-group row">
+ <input class="form-control col-sm-6" [(ngModel)]="dateto" type="date"/>
+  </div>
+<ion-button type="full" (click)="getInstitutions()" color="primary">Click</ion-button>
+  <table class="table">
+
+    <thead>
+    <tr style="color: gray" class="table-warning">
+      <th scope="col">Institution</th>
+      <th scope="col">Amount</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <ion-progress-bar width="100%" buffer="0.5" value="0.5" *ngIf="!institutions" type="indeterminate"></ion-progress-bar>
+    <tbody>
+
+    <tr routerLink="/track" tappable *ngFor="let claim of institutions">
+      <td>{{claim.Type}}</td>
+      <td>{{claim.Amount}} </td>
+      <td colspan="2"><ion-icon name="play" padding-left slot="play"></ion-icon></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+</ion-content>

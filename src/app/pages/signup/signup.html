@@ -1,0 +1,115 @@
+<ion-header no-border>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+    <ion-title align-items-center></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+
+ <div class="card" style="background-color: white; border-radius: 10px; margin: 10px;">
+  <div style="font-size: 30px; color: gray; text-align: center; margin-left: 5%;font-weight: lighter;">
+    Signup !
+  </div>
+  <div style="font-size: 16px; color: gray; margin-bottom: 10px; margin-top:20px; text-align: center; margin-left: 5%;font-weight: bold;">
+    Please fill in this form to signup
+  </div>
+
+  <form #loginForm="ngForm" novalidate>
+
+    <ion-list *ngIf="signupOption==true">
+      <ion-radio-group (ionChange)="marked($event)" value="biff">
+        <ion-list-header>
+          <ion-label>Welcome, Are you an Individual or a company</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+          <ion-label>Individual</ion-label>
+          <ion-radio  slot="end" value="Individual"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Company</ion-label>
+          <ion-radio slot="end"  value="company"></ion-radio>
+        </ion-item>
+
+
+      </ion-radio-group>
+    </ion-list>
+    <div *ngIf="signupOption==false">
+      <div  padding-start padding-bottom padding-end class="form-group">
+
+        <ion-input type="text" name="tedfdfxt"  [(ngModel)]="FullNames" required class="form-control" id="dfsdIdfnputEmdsadafil1" aria-describedby="emailHelp" placeholder="Enter Company Name"></ion-input>
+      </div>
+    <div   padding-start padding-bottom padding-end class="form-group">
+
+      <ion-input type="text" name="text"  [(ngModel)]="FullNames" required class="form-control" id="dfsdIdfnputEmafil1" aria-describedby="emailHelp" placeholder="Enter Full Name"></ion-input>
+  </div>
+    <div  padding-start padding-bottom padding-end class="form-group">
+
+      <ion-input type="text" name="text" [(ngModel)]="Surname"  required class="form-control" id="examdspjwdledfsdIdfnputEmafil1" aria-describedby="emailHelp" placeholder="Enter Surname"></ion-input>
+    </div>
+    <div padding-start padding-end class="form-group">
+
+      <ion-input type="text" name="number" [(ngModel)]="CellPhoneNumber" required class="form-control" id="exautEmail1" aria-describedby="emailHelp" placeholder="Enter Phone Number"></ion-input>.
+
+    </div>
+    <div  padding-start padding-bottom padding-end class="form-group">
+
+      <textarea type="text" name="email"  [(ngModel)]="Address" required class="form-control" id="exampledfsdIdfnputEmafil1" aria-describedby="emailHelp" placeholder="Enter Contact Address"></textarea>
+    </div>
+    <div padding-start padding-end class="form-group">
+
+      <ion-input type="text" name="email" [(ngModel)]="Mail" required class="form-control" id="exampledfsdIdfnputEmail1" aria-describedby="emailHelp" placeholder="Enter Email"></ion-input>
+
+    </div>
+
+    <ion-grid>
+      <ion-row padding-top>
+        <ion-col  size="4">
+          <div style="height: 1px; margin-top: 12px; width: 100%; background-color: gray"></div>
+        </ion-col>
+        <ion-col size="4"><span style="text-align: center; color: #1a1a1a; font-weight: bold; font-size: 12px;">Create Login Details</span></ion-col>
+        <ion-col size="4">
+          <div style="height: 1px;  margin-top: 12px; width: 100%; background-color: gray"></div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <div  padding-start padding-bottom padding-end class="form-group">
+
+      <ion-input type="text" name="text" [(ngModel)]="FullNames"  required class="form-control" id="exampjwdledfsdIdfnputEmafil1" aria-describedby="emailHelp" placeholder="Enter First Name"></ion-input>
+    </div>
+
+    <div padding-start padding-end class="form-group">
+
+      <ion-input type="password" name="password"  [(ngModel)]="PasswordUsed" required class="form-control" id="exampledwdfsdIdfnputEmail1" aria-describedby="emailHelp" placeholder="Enter Password"></ion-input>
+
+    </div>
+    <div padding-start padding-end class="form-group">
+
+      <ion-input type="password" name="password"  [(ngModel)]="PasswordUsed2" required class="form-control" id="exampledwdfsdjdIdfnputEmail1" aria-describedby="emailHelp" placeholder="Re-Enter your Password"></ion-input>
+       <p style="color: red">{{PassMessage}}</p>
+    </div>
+
+
+
+
+    <ion-button padding-start padding-end (click)="sendPostRequest()"  expand="block">Register </ion-button>
+
+    </div>
+
+
+
+  </form>
+
+ </div>
+
+
+
+
+
+</ion-content>

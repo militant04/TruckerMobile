@@ -1,0 +1,62 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segment" (ionChange)="updateSchedule()">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favorites
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header  style="background: orange; color: white;" >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="home" defaultHref="homepaage"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Truck3r Jobs</ion-title>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="android" >
+    <ion-searchbar    (ionChange)="getItems($event)" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="!android" >
+    <ion-searchbar (ionChange)="getItems($event)" placeholder="Search"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+
+
+
+  <ion-card >
+    <ion-item >
+
+      <p padding-top style="color: gray; font-weight: bold">{{Date}}</p>
+      <ion-button slot="end"  routerLink="/app/tabs/map" size="small" color="primary" fill="outline" > Track</ion-button>
+    </ion-item>
+    <ion-card-content>
+      <ion-icon name="pin" color="primary" slot="start"></ion-icon>
+       {{email}} to {{phone}}
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+<!--  <ion-list-header [hidden]="shownSessions > 0">-->
+<!--    No Results Found-->
+<!--  </ion-list-header>-->
+
+  <ion-fab routerLink="/app/tabs/speakers" slot="fixed" vertical="bottom" horizontal="end" #fab>
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header no-border class="ion-no-border" style="background-color: #ed8806; color:white;">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/tabs/schedule"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Claims</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="orange" style="background-color: #ed8806">
+
+  <div class="table-responsive" style="margin: 10px; width: 94%; height: auto; min-height: 50vh; border-radius: 20px; background-color: white">
+
+
+    <table class="table">
+
+      <thead>
+      <tr style="color: gray" class="table-warning">
+        <th scope="col">Institution</th>
+        <th scope="col">Amount</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <ion-progress-bar width="100%" buffer="0.5" value="0.5" *ngIf="!claimdata" type="indeterminate"></ion-progress-bar>
+      <tbody>
+
+      <tr routerLink="/track" tappable *ngFor="let claim of claimdata">
+        <td>Barclays Bank</td>
+        <td>{{claim.claimbulk}} </td>
+        <td colspan="2"><ion-icon name="play" padding-left slot="play"></ion-icon></td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</ion-content>
+

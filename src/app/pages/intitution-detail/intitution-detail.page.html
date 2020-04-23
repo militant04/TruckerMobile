@@ -1,0 +1,65 @@
+<ion-header no-border style="background-color: orange;color:white;">
+  <ion-toolbar no-margin color="primary" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/tabs/schedule"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{amac2}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+<!--  <div style="height: 80px; width: 100%; border-bottom-left-radius: 1000px; border-bottom-right-radius: 1000px; background-color: #ed8806;"></div>-->
+  <ion-card>
+    <ion-card-content>
+      <p> It is {{amac}} from {{email}} to {{phone}} and it will take approximately  {{address}}  to get there</p>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Pick Date </ion-label>
+        <ion-datetime name="easmail" [(ngModel)]="Date" displayFormat="D MMM YYYY H:mm" min="1997" max="2010" value="2005-06-17T11:06Z"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Type of Truck</ion-label>
+        <ion-select name="easmail" [(ngModel)]="TypeofTruck" value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="Heavy">Heavy</ion-select-option>
+          <ion-select-option value="Light">Light</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Truck Model</ion-label>
+        <ion-input name="email" [(ngModel)]="TruckModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Trailers</ion-label>
+        <ion-select name="email" [(ngModel)]="Trailers" value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="None">None</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Left Hand Drive</ion-label>
+        <ion-select name="email" [(ngModel)]="LeftHand" value="brown" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="Yes">Yes</ion-select-option>
+          <ion-select-option value="No">No</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-textarea name="email" [(ngModel)]="Comment" position="floating">Comment</ion-textarea>
+
+      </ion-item>
+
+
+      <ion-button shape="round" padding-start padding-end (click)="saveValues()"  expand="block">Create New Job</ion-button>
+
+
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

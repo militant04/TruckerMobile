@@ -1,0 +1,88 @@
+<ion-header no-border>
+  <ion-toolbar no-border color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="overflow: hidden; height: 100vh;" color="primary">
+  <div padding>
+
+    <div style="margin-left: 10%; font-size: 24px; text-align: center">Hello <span *ngIf="username" style="font-weight: bold; color: white; text-transform: uppercase">, {{username}}</span></div>
+    <div style="margin-left: 10%; font-size: 20px; font-weight: lighter; text-align: center">How can we be of assistance? </div>
+
+  </div>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col routerLink="/app/tabs/schedule" style="border-right: solid 1px whitesmoke; border-bottom: solid 1px whitesmoke; height : 100px;" size="6">
+
+        <div style="margin-left: 16%">
+          <ion-icon color="light" style="width: 40px; height: 40px"  name="business"></ion-icon>
+        </div>
+        <div style="text-align: center">
+          Your Details
+        </div>
+      </ion-col >
+      <ion-col routerLink="/app/tabs/speakers" style="border-bottom: solid 1px whitesmoke" size="6">
+        <div style="margin-left: 16%">
+          <ion-icon color="light" style="width: 40px; height: 40px ; text-align: center"  name="briefcase"></ion-icon>
+        </div>
+        <div style="text-align: center">
+          Add Job
+        </div>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col routerLink="/track" style="border-right: solid 1px whitesmoke; border-bottom: solid 1px whitesmoke; height : 100px;" size="6">
+
+        <div style="margin-left: 16%">
+          <ion-icon color="light" style="width: 40px; height: 40px"  name="pulse"></ion-icon>
+        </div>
+        <div>
+          Track Your Truck
+        </div>
+      </ion-col >
+      <ion-col  routerLink="/view"  style="border-bottom: solid 1px whitesmoke" size="6">
+        <div style="margin-left: 16%">
+          <ion-icon color="light" style="width: 40px; height: 40px;text-align: center"  name="wallet"></ion-icon>
+        </div>
+        <div style="text-align: center">
+          History
+        </div>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col routerLink="/app/tabs/about" style="border-right: solid 1px whitesmoke;  height : 100px;" size="6">
+
+        <div style="margin-left: 16%; ">
+          <ion-icon color="light" style="width: 40px; height: 40px;text-align: center"  name="finger-print"></ion-icon>
+        </div>
+        <div style="text-align: center">
+          About Truck3r
+        </div>
+      </ion-col >
+      <ion-col routerLink="/app/tabs/map"  size="6">
+        <div style="margin-left: 16%">
+          <ion-icon color="light" style="width: 40px; height: 40px;text-align: center"  name="navigate"></ion-icon>
+        </div>
+        <div style="text-align: center">
+          Find Us
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+  <div id="map-id" style="height: 350px; background-color: white;" #mapCanvas class="map-canvas"></div>
+<!--  <ion-footer id="footer">-->
+<!--    <div style="background-color: rgba(13,13,13,0.56); margin-left: 10px; margin-right: 10px; border-radius: 10px;">-->
+<!--    <p padding>&copy; Truck3r - Terms and Conditions Apply</p>-->
+<!--    </div>-->
+<!--  </ion-footer>-->
+
+
+</ion-content>

@@ -1,0 +1,144 @@
+
+<ion-content  class="background">
+  <div  style="background-color: rgba(255,140,0,0.68); position: fixed;top:0;z-index: 100; width: 100%; height: 100vh">
+<div padding style="background-color: rgba(0,0,0,0.68); border-radius: 10px; margin-top: 40px; margin-left: 20px; margin-right: 20px;">
+  <div style="font-size: 30px; color: whitesmoke; text-align: center; margin-left: 5%;font-weight: bold;">
+    Truck3r
+  </div>
+
+  <div style="width: 100px; height: 100px; border-radius: 100px; background-color: white; margin-left:35%;">
+    <div style="padding: 20px">
+
+
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 512.043 512.043" Height="40" style="enable-background:new 0 0 512.043 512.043;" xml:space="preserve">
+<path style="fill:#FF7058;" d="M436.437,164.8H330.709v191.627h173.227v-86.251l-20.203-69.824
+	C477.643,179.296,458.357,164.8,436.437,164.8"/>
+        <path style="fill:#84DBFF;" d="M478.645,269.291l-18.005-62.24c-3.104-10.699-13.056-18.187-24.203-18.187h-81.664v80.427H478.645z"
+        />
+        <polygon style="fill:#CDD6E0;" points="478.667,269.259 354.731,269.259 354.731,188.832 "/>
+        <path style="fill:#F2F2F2;" d="M478.645,269.291l-18.005-62.24c-3.104-10.699-13.056-18.187-24.203-18.187h-81.664L478.645,269.291z
+	"/>
+        <path style="fill:#FFD15C;" d="M32,68.597h266.709c17.664,0,32,14.325,32,32v255.819H0V100.597C0,82.923,14.325,68.597,32,68.597"/>
+        <polygon style="fill:#F2F2F2;" points="216.747,68.651 216.747,153.205 204.373,140.832 191.403,153.803 178.443,140.832
+	165.483,153.803 152.501,140.832 139.371,153.803 126.421,140.832 113.899,153.355 113.899,68.651 "/>
+        <path style="fill:#334A5E;" d="M512.043,356.405v36.16h-512v-36.16h53.44c12.48-22.4,36.48-37.547,64-37.547
+	c27.413,0,51.413,15.147,64,37.547h171.947c12.48-22.4,36.363-37.547,63.883-37.547c27.52,0,51.413,15.147,64,37.547H512.043z"/>
+        <path style="fill:#40596B;" d="M468.416,392.341c0,28.224-22.88,51.104-51.104,51.104s-51.083-22.88-51.083-51.104
+	s22.869-51.104,51.083-51.104C445.547,341.237,468.416,364.117,468.416,392.341"/>
+        <path style="fill:#ACB3BA;" d="M437.856,392.341c0,11.339-9.195,20.523-20.523,20.523c-11.339,0-20.544-9.184-20.544-20.523
+	c0-11.339,9.195-20.523,20.544-20.523C428.661,371.808,437.856,381.003,437.856,392.341"/>
+        <path style="fill:#40596B;" d="M168.544,392.341c0,28.224-22.891,51.104-51.104,51.104c-28.224,0-51.104-22.88-51.104-51.104
+	s22.88-51.104,51.104-51.104C145.653,341.237,168.544,364.117,168.544,392.341"/>
+        <path style="fill:#ACB3BA;" d="M137.963,392.341c0,11.339-9.184,20.523-20.523,20.523s-20.533-9.184-20.533-20.523
+	c0-11.339,9.195-20.523,20.533-20.523S137.963,381.003,137.963,392.341"/>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+        <g>
+</g>
+</svg>
+
+
+    </div>
+  </div>
+
+  <div style="font-size: 16px; color: #c5c5c5; margin-bottom: 10px; margin-top:20px; text-align: center; margin-left: 5%;font-weight: bold;">
+    Enter your email address and password
+  </div>
+
+  <form #loginForm="ngForm" novalidate>
+
+    <div  padding-start padding-bottom padding-end class="form-group">
+
+      <input type="email" name="email" [(ngModel)]="email" required class="form-control" id="exampledfsdIdfnputEmafil1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+    <div padding-start padding-end classf="form-group">
+
+      <input type="password" name="password" [(ngModel)]="password" required class="form-control" id="exampledfsdIdfnputEmail1" aria-describedby="emailHelp" placeholder="Enter Password">
+
+    </div>
+
+
+
+
+        <ion-button shape="round" padding-start padding-end (click)="loginClick()"  expand="block">Login</ion-button>
+
+
+
+
+
+  </form>
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col  size="4">
+        <div style="height: 1px; margin-top: 12px; width: 100%; background-color: gray"></div>
+      </ion-col>
+      <ion-col size="4"><span style="text-align: center; font-size: 12px;color:white">No Account Yet?</span></ion-col>
+      <ion-col size="4">
+        <div style="height: 1px;  margin-top: 12px; width: 100%; background-color: gray"></div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+  <ion-footer no-border>
+    <ion-button shape="round"  padding-start padding-end (click)="onSignup()" color="light" expand="block">Signup</ion-button>
+<!--    <ion-button outline="true"  padding-start padding-end (click)="goToMember()" color="light" expand="block">Login As Member</ion-button>-->
+<!--    <div padding style="color: #c2c2c2"> Powered by Sesfont Technologies</div>-->
+  </ion-footer>
+</div>
+
+
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col  size="4">
+        <div style=" margin-top: 12px; width: 100%; "></div>
+      </ion-col>
+      <ion-col tappable (click)="fingerPrintLogin()" size="4">
+        <img style="text-align: center" height="70px" src="../../../assets/img/fingerprint.svg">
+
+      </ion-col>
+      <ion-col size="4">
+        <div style=" margin-top: 12px; width: 100%; "></div>
+      </ion-col>
+    </ion-row>
+    <p style="text-align: center; color:whitesmoke;">Use Fingerprint to sign in</p>
+
+  </ion-grid>
+
+  <div>
+
+  </div>
+  </div>
+
+
+</ion-content>
+

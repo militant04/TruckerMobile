@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>auth</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div  padding-start padding-bottom padding-end class="form-group">
+
+    <input type="email" name="email" [(ngModel)]="phonenumber" required class="form-control" id="exampledfsdIdfnputEmafil1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <ion-button padding-start padding-end (click)="phoneAuth()"  expand="block">Login</ion-button>
+  <ion-button padding-start padding-end (click)="signInWithCode()"  expand="block">Login</ion-button>
+
+</ion-content>

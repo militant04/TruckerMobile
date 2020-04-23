@@ -1,0 +1,22 @@
+#map-id:before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #ed8806, rgba(255, 255, 255, 0));
+  pointer-events: none;
+  z-index: 999;
+}
+h1::before{
+  content: 'Hello World';
+  color: #FFF;
+  position: absolute;
+  left: 100px;
+  z-index: 999;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
